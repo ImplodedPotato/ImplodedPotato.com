@@ -7,6 +7,7 @@ const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
+	customElement: true,
 	kit: {
 		adapter: adapter({
 			// default options are shown. On some platforms

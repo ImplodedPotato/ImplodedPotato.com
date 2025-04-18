@@ -9,22 +9,6 @@
            h1: "Seddit",
            h2: "Satiric Reddit",
            link: "/seddit"
-        },{
-            h1: "Seddit",
-            h2: "Satiric Reddit",
-            link: "/sedddit"
-        },{
-            h1: "Seddit",
-            h2: "Satiric Reddit",
-            link: "/sefddit"
-        },{
-            h1: "Seddit",
-            h2: "Satiric Reddit",
-            link: "/sedgdit"
-        },{
-            h1: "Seddit",
-            h2: "Satiric Reddit",
-            link: "/sedhdit"
         }
     ]
 </script>
@@ -40,14 +24,14 @@
         <a href="{button.link}">
             <div class="main-buttons">
                 <p>{button.h1}</p>
-                <p>{button.h2}</p>
+                <p style="margin-top: 10px; margin-bottom: 50px">{button.h2}</p>
             </div>
         </a>
     {/each}
 </div>
 
 <a href="https://github.com/ImplodedPotato/implodedpotato.com/">
-    <img style="position: fixed; bottom: 1vh; right: 1vh; scale: 5vw" src="github-mark-white.svg" alt="GitHub">
+    <img style="position: fixed; bottom: 8px; right: 8px; scale: 0.6" src="github-mark-white.svg" alt="GitHub">
 </a>
 
 <style>
@@ -55,6 +39,14 @@
         body {
             background-color: #282C34;
             margin: auto;
+            padding: 10px;
+            font-size: initial;
+        }
+
+        @media screen and (max-width: 400px) {
+            body {
+                font-size: small;
+            }
         }
     }
 
@@ -66,19 +58,32 @@
         margin: auto;
         max-width: max-content;
     }
+    
+    @media screen and (min-width: 600px) {
+        .main-buttons-capsule {
+            grid-template-columns: repeat(2, min-content);
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        .main-buttons-capsule {
+            grid-template-columns: repeat(3, min-content);
+        }
+    }
 
     .main-buttons {
-        background-color: #565471;
+        background-color: #49485e;
         padding: 5px;
         border-radius: 10px;
         display: block;
         width: 250px;
         height: 250px;
-        /*margin: auto;*/
+        font-size: medium;
+        align-content: center;
     }
 
     .main-buttons:hover {
-        background-color: #6C7DA1;
+        background-color: #54617e;
     }
 
     a {

@@ -1,38 +1,46 @@
-# sv
+# ImplodedPotato.com
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+The static where the various projects of one Imploded Potato resides
 
-## Creating a project
+## How It's Made? 
 
-If you're seeing this, you've probably already done this step. Congrats!
+Coding in Svelte
+The code is then hosted here for free on GitHiub Pages.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Projects
 
-# create a new project in my-app
-npx sv create my-app
-```
+1. [Games](#games)
+2. [Seddit](#seddit)
 
-## Developing
+## To Run:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+``` Shell
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## To Build:
 
-To create a production version of your app:
-
-```bash
+``` Shell
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## To Build And Deploy:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+``` Shell
+npm run deploy
+```
+
+
+### Games
+
+Residing at [games.implodedpotato.com](https://games.implodedpotato.com/) are games I coded and ported to web. 
+Coded in C or CPP and with framworks, such as [Raylib](raylib.com) or [SDL3](https://www.libsdl.org/). 
+
+For more details, please refer to [github.com/ImplodedPotato/games.implodedpotato.com](https://github.com/ImplodedPotato/games.implodedpotato.com). 
+
+### Seddit
+
+Site: [ImplodedPotato.com/Seddit](https://implodedpotato.com/seddit/)
+
+Seddit, or Sateric Reddit, is an immitation of Reddit made for an English project.
+I just wanted to be extra and learn how to build websites, along with accually doing it. 

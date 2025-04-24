@@ -1,5 +1,3 @@
-
-
 <h1>Seddit</h1>
 <h3><b>S</b>eteric R<b>eddit</b></h3>
 

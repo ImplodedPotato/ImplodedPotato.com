@@ -1,21 +1,23 @@
 <script lang="ts">
     let buttons = [
         {
-        h1: "Games.ImplodedPotato.com",
-        h2: "A collection of games",
-        link: "https://games.implodedpotato.com"
+            h1: "Games.ImplodedPotato.com",
+            h2: "A collection of games",
+            link: "https://games.implodedpotato.com"
         },
         {
            h1: "Seddit",
            h2: "Satiric Reddit",
            link: "/seddit"
+        },
+        {
+            h1: "Business",
+            h2: "Business Site",
+            link: "/BUS"
         }
     ]
 </script>
 
-<svelte:head>
-    <link rel="preload" as="font" href="/FiraCode-Retina.ttf" type="font/ttf" crossorigin="anonymous">
-</svelte:head>
 <h1>Welcome to ImplodedPotato.com</h1>
 <p>Here you will find the 'many' projects of a Potato which has been Imploded</p>
 
@@ -30,18 +32,9 @@
     {/each}
 </div>
 
-<a href="https://github.com/ImplodedPotato/implodedpotato.com/">
-    <img style="position: fixed; bottom: 8px; right: 8px; scale: 0.6" src="github-mark-white.svg" alt="GitHub">
-</a>
 
 <style>
     :global {
-        body {
-            background-color: #282C34;
-            margin: auto;
-            padding: 10px;
-            font-size: initial;
-        }
 
         @media screen and (max-width: 400px) {
             body {
@@ -86,21 +79,5 @@
         background-color: #54617e;
     }
 
-    a {
-        color: aquamarine;
-        text-decoration: none;
-    }
 
-    h1, p, div {
-        color: antiquewhite;
-        text-align: center;
-        font-family: "fira-code",monospace;
-    }
-
-    @font-face {
-        font-family: 'fira-code';
-        font-style: normal;
-        font-weight: 200;
-        src: url("/FiraCode-Retina.ttf");
-    }
 </style>

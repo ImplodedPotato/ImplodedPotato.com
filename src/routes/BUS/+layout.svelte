@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
     let { children } = $props();
 
-    // console.log(window.matchMedia("(max-width: 600px)"));
+
+    let width = $state(0);
 </script>
+
+<svelte:window bind:innerWidth={width}/>
 
 <svelte:head>
     <link rel="preload" as="font" href="/FiraCode-Retina.ttf" type="font/ttf" crossorigin="anonymous">
@@ -17,11 +20,14 @@
         </div>
     </a>
 
-
-    <nav style="margin-left: auto; float: left;">
-        <a class="nav_button" href="/BUS/Products">Products</a>
-        <a class="nav_button" style="padding-right: 5px" href="/BUS/Mission-Statement">Mission Statement</a>
-    </nav>
+    {#if width > 550}
+        <nav style="margin-left: auto; float: left;">
+            <a class="nav_button" href="/BUS/Products">Products</a>
+            <a class="nav_button" style="padding-right: 5px" href="/BUS/Mission-Statement">Mission Statement</a>
+        </nav>
+    {:else}
+        <img id="ham" src="/ham.svg" alt="ham"/>
+    {/if}
 </div>
 
 <!--<div style="position: fixed; width: 200px; height: 200px; margin-left: calc(50% - 100px); background-color: rgba(0, 0, 0, .5); filter: blur(1rem)"></div>-->
@@ -39,7 +45,7 @@
             content: '';
             width: calc(100% + 10px);
             height: calc(8vh + 20px + 10px + 5px);
-            /* height of nav + little extra + translate offest + little extra */
+            /* height of nav + match nav + translate offest + little extra */
             backdrop-filter: blur(15px);
             filter: blur(5px);
             transform: translate(-20px, -20px);
@@ -52,6 +58,21 @@
         transition: all 125ms ease-out;
         position: relative;
         display: inline-block;
+        color: aquamarine;
+    }
+
+    #ham {
+        margin-right: 10px;
+        transition: all 125ms ease-out;
+        position: relative;
+        display: inline-block;
+        color: aquamarine;
+        margin-left: auto;
+        padding-right: 10px;
+        width: 50px;
+    }
+    #ham:hover {
+        color: cornflowerblue;
     }
 
 
@@ -81,12 +102,11 @@
         background-color: #161A20;
         border-radius: 10px;
         width: calc(100% - 40px);
-        height: 7vh;
+        height: calc(5vh + 20px);
         margin: 10px;
         box-shadow: 0px 0px 10px 5px #142F2A,
                     0px 0px 50px 10px rgba(0, 0, 0, 0.5);
         transition: all 125ms ease-in;
-        backdrop-filter: blur(100vh);
     }
 
     #nav_bar:hover {

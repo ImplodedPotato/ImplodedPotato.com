@@ -1,0 +1,1 @@
+import{t as o,a}from"../chunks/xVE3EEhI.js";import"../chunks/BbkE3Oae.js";import{R as p}from"../chunks/CPSGUPOm.js";var d=o('<h1>Seddit</h1> <h3><b>S</b>eteric R<b>eddit</b></h3> <p>This page has been moved to <a href="https://legacy.implodedpotato.com/seddit">legacy.implodedpotato.com/seddit</a></p>',1);function s(t){var e=d();p(4),a(t,e)}export{s as component};

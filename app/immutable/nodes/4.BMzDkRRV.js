@@ -1,1 +1,0 @@
-import{t as r,a as o}from"../chunks/DqKN_-FH.js";import"../chunks/gTuCREn7.js";import{o as m,q as s}from"../chunks/FsmQ1HhP.js";import{e as f,i as h}from"../chunks/C9JNeVhi.js";var v=r("<p></p>"),c=r("<h1>bus</h1> <!>",1);function b(e){var t=c(),p=m(s(t),2);f(p,0,()=>({length:100}),h,(i,d,n)=>{var a=v();a.textContent=n,o(i,a)}),o(e,t)}export{b as component};

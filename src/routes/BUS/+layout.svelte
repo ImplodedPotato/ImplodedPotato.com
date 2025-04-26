@@ -1,16 +1,28 @@
 <script lang="ts">
     let { children } = $props();
 
+    import { fade, scale } from "svelte/transition";
 
     let width = $state(0);
+
+    let isHamDown = $state(false);
+
+    let navButtons = [
+        {
+            title: "Products",
+            url: "/BUS/Products"
+        },
+        {
+            title: "Mission Statement",
+            url: "/BUS/Mission-Statement"
+        }
+    ]
 </script>
 
 <svelte:window bind:innerWidth={width}/>
 
-<svelte:head>
-    <link rel="preload" as="font" href="/FiraCode-Retina.ttf" type="font/ttf" crossorigin="anonymous">
-    <link rel="stylesheet" href="/shared.css">
-</svelte:head>
+
+<div id="nav_bar_blur"></div>
 
 <div id="nav_bar">
     <a href="/BUS">
@@ -20,38 +32,45 @@
         </div>
     </a>
 
-    {#if width > 550}
+    {#if width > 550 || width === 0}
         <nav style="margin-left: auto; float: left;">
-            <a class="nav_button" href="/BUS/Products">Products</a>
-            <a class="nav_button" style="padding-right: 5px" href="/BUS/Mission-Statement">Mission Statement</a>
+            {#each navButtons as butt (butt.url)}
+                {#if navButtons[navButtons.length - 1] === butt}
+                    <a class="nav_button" style="padding-right: 5px" href={butt.url}>{butt.title}</a>
+                {:else}
+                    <a class="nav_button" href={butt.url}>{butt.title}</a>
+                {/if}
+            {/each}
         </nav>
     {:else}
-        <img id="ham" src="/ham.svg" alt="ham"/>
+        {#if !isHamDown}
+            <button in:scale out:scale class="ham-container"
+                    style="margin-left: auto" type="button" onclick={() => isHamDown = !isHamDown} >
+                <img id="ham" src="/ham.svg" alt="ham"/>
+            </button>
+        {:else}
+            <button in:scale out:scale class="ham-container"
+                    style="margin-left: auto" type="button" onclick={() => isHamDown = !isHamDown} >
+                <img id="ham" style="width: 35px; padding-right: 15px;" src="/hamDown.svg" alt="ham"/>
+            </button>
+            <div in:fade={{ duration: 175 }} out:fade={{ duration: 175 }} id="nav_ham_container">
+                {#each navButtons as butt (butt.url)}
+                    <a class="nav_button" href={butt.url} onclick={() => isHamDown = false}>{butt.title}</a>
+                {/each}
+            </div>
+        {/if}
     {/if}
 </div>
 
-<!--<div style="position: fixed; width: 200px; height: 200px; margin-left: calc(50% - 100px); background-color: rgba(0, 0, 0, .5); filter: blur(1rem)"></div>-->
-
 <div style="margin-top: calc(8vh + 20px)"></div>
+
+<a id="back" href="/../">Back to ImplodedPotato.com</a>
 
 <style>
     /*
     Animations inspired by:
     https://prismic.io/blog/css-hover-effects
      */
-    :global {
-        body::before {
-            position: fixed;
-            content: '';
-            width: calc(100% + 10px);
-            height: calc(8vh + 20px + 10px + 5px);
-            /* height of nav + match nav + translate offest + little extra */
-            backdrop-filter: blur(15px);
-            filter: blur(5px);
-            transform: translate(-20px, -20px);
-            box-sizing: border-box;
-        }
-    }
     .nav_button {
         margin-left: 10px;
         margin-right: 10px;
@@ -61,20 +80,9 @@
         color: aquamarine;
     }
 
-    #ham {
-        margin-right: 10px;
-        transition: all 125ms ease-out;
-        position: relative;
-        display: inline-block;
-        color: aquamarine;
-        margin-left: auto;
-        padding-right: 10px;
-        width: 50px;
-    }
-    #ham:hover {
+    .nav_button:hover {
         color: cornflowerblue;
     }
-
 
     .nav_button::after {
         content: '';
@@ -94,6 +102,40 @@
         transform: scaleX(0.9);
     }
 
+    .ham-container {
+        position: absolute;
+        right: 0;
+    }
+
+    #ham {
+        margin-right: 10px;
+        transition: all 125ms ease-out;
+        position: relative;
+        display: inline-block;
+        color: aquamarine;
+        margin-left: auto;
+        padding-right: 10px;
+        width: 50px;
+    }
+
+    #ham:hover {
+        color: cornflowerblue;
+    }
+
+    #nav_ham_container {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top:  calc(8vh + 20px);
+        flex-direction: column;
+        gap: 20px;
+        font-size: large;
+        align-items: end;
+        padding: 15px;
+        background-color: #161A1F;
+        box-shadow: 0px 0px 10px 5px #19483F;
+        border-radius: 10px;
+    }
 
     #nav_bar {
         position: fixed;
@@ -113,6 +155,18 @@
         box-shadow: 0px 0px 10px 5px #19483F;
     }
 
+    #nav_bar_blur {
+        position: fixed;
+        content: '';
+        width: calc(100% + 10px);
+        height: calc(8vh + 20px + 10px + 10px);
+        /* height of nav + match nav + translate offest + little extra */
+        backdrop-filter: blur(15px);
+        filter: blur(6px);
+        transform: translate(-20px, -20px);
+        box-sizing: border-box;
+    }
+
     #logo {
         width: 50px;
         height: 50px;
@@ -121,6 +175,13 @@
 
     #logo:hover {
         transform: rotate(180deg);
+    }
+
+    #back {
+        position: fixed;
+        left: 3vw;
+        bottom: 2vw;
+        transition: all 125ms ease-out;
     }
 
 </style>

@@ -3,17 +3,26 @@
         {
             h1: "Games.ImplodedPotato.com",
             h2: "A collection of games",
-            link: "https://games.implodedpotato.com"
+            link: "https://games.implodedpotato.com",
+            hidden: false
         },
         {
-           h1: "Seddit",
-           h2: "Satiric Reddit",
-           link: "/seddit"
+            h1: "Seddit",
+            h2: "Satiric Reddit",
+            link: "/seddit",
+            hidden: false
         },
         {
             h1: "Business",
             h2: "Business Site",
-            link: "/BUS"
+            link: "/BUS",
+            hidden: false
+        },
+        {
+            h1: "Vid Prod Port",
+            h2: "Stupid Prod",
+            link: "/vp",
+            hidden: true
         }
     ]
 </script>
@@ -23,19 +32,20 @@
 
 <div class="main-buttons-capsule">
     {#each buttons as button (button.link)}
-        <a href="{button.link}">
-            <div class="main-buttons">
-                <p>{button.h1}</p>
-                <p style="margin-top: 10px; margin-bottom: 50px">{button.h2}</p>
-            </div>
-        </a>
+        {#if !button.hidden}
+            <a href="{button.link}">
+                <div class="main-buttons">
+                    <p>{button.h1}</p>
+                    <p style="margin-top: 10px; margin-bottom: 50px">{button.h2}</p>
+                </div>
+            </a>
+        {/if}
     {/each}
 </div>
 
 
 <style>
     :global {
-
         @media screen and (max-width: 400px) {
             body {
                 font-size: small;
@@ -51,7 +61,7 @@
         margin: auto;
         max-width: max-content;
     }
-    
+
     @media screen and (min-width: 600px) {
         .main-buttons-capsule {
             grid-template-columns: repeat(2, min-content);

@@ -2,3 +2,7 @@
 {#each {length: 100}, i}
        <p>{i}</p>
 {/each}
+
+<style>
+
+</style>

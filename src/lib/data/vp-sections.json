@@ -1,0 +1,70 @@
+[
+  {
+    "content": [
+      {
+        "name": "Family",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "Friends",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "Hobbies",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "Favorites",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      }
+    ],
+    "name": "aboutMe",
+    "id": "about-me"
+  },
+  {
+    "content": [
+      {
+        "name": "College I",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "College II",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "College III",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      }
+    ],
+    "name": "Dream Colleges",
+    "id": "dream-colleges"
+  },
+  {
+    "content": [
+      {
+        "name": "Interest I",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "Interest II",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      },
+      {
+        "name": "Interest III",
+        "pic": "https://placehold.co/200x200",
+        "explanation": null
+      }
+    ],
+    "name": "Career Interests",
+    "id": "career-interests"
+  }
+]

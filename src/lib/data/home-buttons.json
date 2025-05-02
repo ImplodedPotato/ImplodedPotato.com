@@ -1,0 +1,26 @@
+[
+  {
+    "h1": "Games.ImplodedPotato.com",
+    "h2": "A collection of games",
+    "link": "https://games.implodedpotato.com",
+    "hidden": false
+  },
+  {
+    "h1": "Seddit",
+    "h2": "Satiric Reddit",
+    "link": "/seddit",
+    "hidden": false
+  },
+  {
+    "h1": "Business",
+    "h2": "Business Site",
+    "link": "/BUS",
+    "hidden": false
+  },
+  {
+    "h1": "Vid Prod Port",
+    "h2": "Portfolio made for a High School Video Production Class",
+    "link": "/vp",
+    "hidden": false
+  }
+]

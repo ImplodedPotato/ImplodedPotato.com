@@ -1,30 +1,5 @@
 <script lang="ts">
-    let buttons = [
-        {
-            h1: "Games.ImplodedPotato.com",
-            h2: "A collection of games",
-            link: "https://games.implodedpotato.com",
-            hidden: false
-        },
-        {
-            h1: "Seddit",
-            h2: "Satiric Reddit",
-            link: "/seddit",
-            hidden: false
-        },
-        {
-            h1: "Business",
-            h2: "Business Site",
-            link: "/BUS",
-            hidden: false
-        },
-        {
-            h1: "Vid Prod Port",
-            h2: "Stupid Prod",
-            link: "/vp",
-            hidden: true
-        }
-    ]
+    import buttons from "$lib/data/home-buttons.json"
 </script>
 
 <h1>Welcome to ImplodedPotato.com</h1>
@@ -36,7 +11,7 @@
             <a href="{button.link}">
                 <div class="main-buttons">
                     <p>{button.h1}</p>
-                    <p style="margin-top: 10px; margin-bottom: 50px">{button.h2}</p>
+                    <p style="margin-bottom: 50px; line-height: 1.5">{button.h2}</p>
                 </div>
             </a>
         {/if}

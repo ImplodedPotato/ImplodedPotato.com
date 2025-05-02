@@ -182,6 +182,7 @@
         left: 3vw;
         bottom: 2vw;
         transition: all 125ms ease-out;
+        z-index: 1;
     }
 
 </style>

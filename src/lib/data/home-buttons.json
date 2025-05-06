@@ -21,6 +21,6 @@
     "h1": "Vid Prod Port",
     "h2": "Portfolio made for a High School Video Production Class",
     "link": "/vp",
-    "hidden": false
+    "hidden": true
   }
 ]

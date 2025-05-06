@@ -62,7 +62,7 @@
     {/if}
 </div>
 
-<div style="margin-top: calc(8vh + 20px)"></div>
+<div style="margin-top: calc(8vh + 25px)"></div>
 
 <a id="back" href="/../">Back to ImplodedPotato.com</a>
 
@@ -146,8 +146,7 @@
         width: calc(100% - 40px);
         height: calc(5vh + 20px);
         margin: 10px;
-        box-shadow: 0px 0px 10px 5px #142F2A,
-                    0px 0px 50px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 10px 5px #142F2A;
         transition: all 125ms ease-in;
     }
 

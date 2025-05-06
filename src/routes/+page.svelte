@@ -3,7 +3,16 @@
 </script>
 
 <h1>Welcome to ImplodedPotato.com</h1>
-<p>Here you will find the 'many' projects of a Potato which has been Imploded</p>
+<p>
+    Here you will find the
+    <button onclick={() => buttons[3].hidden = !buttons[3].hidden}>
+        'many'
+    </button>
+    projects of a Potato which has been Imploded
+</p>
+
+
+
 
 <div class="main-buttons-capsule">
     {#each buttons as button (button.link)}
@@ -17,7 +26,6 @@
         {/if}
     {/each}
 </div>
-
 
 <style>
     :global {
@@ -53,7 +61,6 @@
         background-color: #49485e;
         padding: 5px;
         border-radius: 10px;
-        display: block;
         width: 250px;
         height: 250px;
         font-size: medium;

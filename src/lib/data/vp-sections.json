@@ -2,22 +2,18 @@
   {
     "content": [
       {
-        "name": "Family",
+        "name": "Project displaying diffrent angles",
+        "pic": "https://placehold.co/200x200",
+        "vid": "/Group Project 1.mov",
+        "explanation": null
+      },
+      {
+        "name": "Prod 2",
         "pic": "https://placehold.co/200x200",
         "explanation": null
       },
       {
-        "name": "Friends",
-        "pic": "https://placehold.co/200x200",
-        "explanation": null
-      },
-      {
-        "name": "Hobbies",
-        "pic": "https://placehold.co/200x200",
-        "explanation": null
-      },
-      {
-        "name": "Favorites",
+        "name": "Prod 3",
         "pic": "https://placehold.co/200x200",
         "explanation": null
       }

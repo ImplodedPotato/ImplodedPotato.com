@@ -1,1 +1,0 @@
-import{t,a as s}from"../chunks/D_vnBLAF.js";import"../chunks/Dn6w5Xfy.js";import{m as o}from"../chunks/CVsgyMVR.js";var n=t('<h1>Mission Statement</h1> <p id="miss" class="svelte-vlsr88">"To provide elegant, high-performance, and native software specially designed to help users with small annoyances."</p>',1);function m(e){var a=n();o(2),s(e,a)}export{m as component};

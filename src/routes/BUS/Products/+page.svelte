@@ -1,38 +1,7 @@
 <h2>Products</h2>
 
 <script lang="ts">
-    let products = [
-        {
-            name: "product",
-            image: "https://placehold.co/1024x1024",
-
-        },
-        {
-            name: "product 2",
-            image: "https://placehold.co/1024x1024",
-
-        },
-        {
-            name: "product 3",
-            image: "https://placehold.co/1024x1024",
-
-        },
-        {
-            name: "product 4",
-            image: "https://placehold.co/1024x1024",
-
-        },
-        {
-            name: "product 5",
-            image: "https://placehold.co/1024x1024",
-
-        },
-        {
-            name: "product 6",
-            image: "https://placehold.co/1024x1024",
-
-        },
-    ]
+    import products from "$lib/data/bus-products.json"
 </script>
 
 <div id="products_container">

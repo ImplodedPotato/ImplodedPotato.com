@@ -1,0 +1,1 @@
+import{t as e,a as s}from"../chunks/CEbJFC6J.js";import{D as i,F as m}from"../chunks/DiLfd6eK.js";import{s as p}from"../chunks/Cit5Oee8.js";var n=e('<a id="back" href="/../" class="svelte-fxq1l5">Back to ImplodedPotato.com</a> <!>',1);function d(o,t){var a=n(),r=i(m(a),2);p(r,()=>t.children),s(o,a)}export{d as component};

@@ -8,17 +8,13 @@
         "explanation": null
       },
       {
-        "name": "Prod 2",
+        "name": "Project showing the use of Folio",
         "pic": "https://placehold.co/200x200",
-        "explanation": null
-      },
-      {
-        "name": "Prod 3",
-        "pic": "https://placehold.co/200x200",
+        "vid": "/folio.MOV",
         "explanation": null
       }
     ],
-    "name": "aboutMe",
+    "name": "About Me",
     "id": "about-me"
   },
   {
